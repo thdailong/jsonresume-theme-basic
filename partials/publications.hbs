@@ -1,32 +1,26 @@
 {{#if resume.publications.length}}
 <section id="publications">
-	<h2>Publications</h2>
+	<h3 class="title-section">Publications</h3>
+	<div class="divider"></div>
 	{{#each resume.publications}}
 	<div class="item">
-		{{#if name}}
-		<div class="name">
-			{{name}}
+		<div class="flex-between">
+			<div class="title">
+				{{name}}
+			</div>
+			<div class="date">
+				{{releaseDate}}
+			</div>
 		</div>
-		{{/if}}
 		{{#if publisher}}
-		<div class="publisher">
+		<div>
 			{{publisher}}
 		</div>
 		{{/if}}
-		{{#if releaseDate}}
-		<div class="releaseDate">
-			{{releaseDate}}
-		</div>
-		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">Link</a>
-		</div>
-		{{/if}}
 		{{#if summary}}
-		<div class="summary">
-			<p>{{summary}}</p>
-		</div>
+			<div class="italic">
+				{{summary}}
+			</div>
 		{{/if}}
 	</div>
 	{{/each}}

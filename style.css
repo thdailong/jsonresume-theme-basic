@@ -1,6 +1,6 @@
 body {
 	background: #fff;
-	font: 15px Arial, Helvetica, sans-serif;
+	font: 15px Times, Helvetica, sans-serif;
 	line-height: 1.4;
 	margin: 50px 0;
 	margin-bottom: 100px;
@@ -13,42 +13,133 @@ p {
 }
 ul {
 	margin-bottom: 0;
+	margin-top: 5px;
+	padding-left: 15px;
 }
 section {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
 }
-.item {
-	margin-bottom: 1em;
-}
+
 #resume {
 	margin: 0 auto;
 	max-width: 600px;
 	padding: 0 20px;
 }
+
+#name {
+	text-align: center;
+	font-style: italic;
+	color: #3921a4;
+	margin-bottom: 6px;
+}
+#location {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 0px;
+	i {
+		color: #3921a4;
+	}
+}
+
+.date {
+	font-style: italic;
+}
+
+.middle {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.contact-info {
+	i {
+		color: #261c53;
+	}
+	span {
+		color: #3408f9;
+		font-weight: 500;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.contact-info:not(:last-child)::after {
+	content: " ✼ ";
+	margin: 0px 10px;
+}
+
+.title-section {
+	color: #261c53;
+	font-weight: 600;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background-color: #261c53;
+}
+
+.mb {
+	margin-bottom: 10px;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px
+}
+.startDate {
+	font-style: italic;
+}
+.endDate {
+	font-style: italic;
+}
+.area {
+	font-weight: 600;
+}
+.institution {
+	font-style: italic;
+}
+
 #basics {
 	margin-bottom: -10px;
 }
 #basics h3 {
 	margin-top: 1.5em;
 }
-#basics .contact strong,
-#location strong {
-	clear: both;
-	float: left;
-	line-height: 1.3;
-	width: 120px;
-}
-#profiles,
-#skills {
-	overflow: hidden;
-}
-#profiles .item,
-#skills .item {
-	float: left;
-	width: 50%;
+
+.item {
+	padding: 10px 0px 10px 20px;
 }
 
+.summary {
+	margin-top: 4px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.skill-title {
+	width: 180px;
+}
+
+.skill-item {
+	padding: 0px 0px 0px 20px;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 16px;
+}

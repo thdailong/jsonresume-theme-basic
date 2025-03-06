@@ -10,7 +10,7 @@
 	<style>
 	body {
 	background: #fff;
-	font: 15px Arial, Helvetica, sans-serif;
+	font: 15px Times, Helvetica, sans-serif;
 	line-height: 1.4;
 	margin: 50px 0;
 	margin-bottom: 100px;
@@ -23,45 +23,136 @@ p {
 }
 ul {
 	margin-bottom: 0;
+	margin-top: 5px;
+	padding-left: 15px;
 }
 section {
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
 }
-.item {
-	margin-bottom: 1em;
-}
+
 #resume {
 	margin: 0 auto;
-	max-width: 480px;
+	max-width: 600px;
 	padding: 0 20px;
 }
+
+#name {
+	text-align: center;
+	font-style: italic;
+	color: #3921a4;
+	margin-bottom: 6px;
+}
+#location {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 0px;
+	i {
+		color: #3921a4;
+	}
+}
+
+.date {
+	font-style: italic;
+}
+
+.middle {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.contact-info {
+	i {
+		color: #261c53;
+	}
+	span {
+		color: #3408f9;
+		font-weight: 500;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.contact-info:not(:last-child)::after {
+	content: " ✼ ";
+	margin: 0px 10px;
+}
+
+.title-section {
+	color: #261c53;
+	font-weight: 600;
+	font-style: italic;
+	margin-bottom: 0px;
+}
+
+.divider {
+	height: 1px;
+	width: 100%;
+	background-color: #261c53;
+}
+
+.mb {
+	margin-bottom: 10px;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px
+}
+.startDate {
+	font-style: italic;
+}
+.endDate {
+	font-style: italic;
+}
+.area {
+	font-weight: 600;
+}
+.institution {
+	font-style: italic;
+}
+
 #basics {
 	margin-bottom: -10px;
 }
 #basics h3 {
 	margin-top: 1.5em;
 }
-#basics .contact strong,
-#location strong {
-	clear: both;
-	float: left;
-	line-height: 1.3;
-	width: 120px;
-}
-#profiles,
-#skills {
-	overflow: hidden;
-}
-#profiles .item,
-#skills .item {
-	float: left;
-	width: 50%;
+
+.item {
+	padding: 10px 0px 10px 20px;
 }
 
+.summary {
+	margin-top: 4px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.skill-title {
+	width: 180px;
+}
+
+.skill-item {
+	padding: 0px 0px 0px 20px;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 16px;
+}
 
 	</style>
 	
@@ -69,82 +160,144 @@ blockquote {
 	<body>
 	
 	<div id="resume">
-			<h1>Thomas Davis</h1>
-			<h2>Web Developer</h2>
+			<h1 id="name">Thomas Davis</h1>
+					<div id="location">
+						<i>
+							Location: 
+						</i>
+						Melbourne
+					</div>
 			<section id="basics">
 				<div class="contact">
-				<div class="website">
-					<strong>Website</strong>
-					https://lordajax.com
-				</div>
-				<div class="email">
-					<strong>Email</strong>
-					thomasalwyndavis@gmail.com
-				</div>
-				<div class="phone">
-					<strong>Phone</strong>
-					0411021021
-				</div>
+					<div class="middle">
+							<div class="contact-info">
+								<i> E-mail: </i>
+								<span> thomasalwyndavis@gmail.com </span>
+							</div>
+							<div class="contact-info">
+								<i>Telephone number: </i>
+								<span> 0411021021 </span>
+							</div>
+					</div>
+					<div class="middle">
+							<div class="contact-info">
+								<i>
+									LinkedIn:
+								</i>
+								<span>
+									<a href="https://twitter.com/ajaxdavis">Linkedin Profile</a>
+								</span>
+							</div>
+							<div class="contact-info">
+								<i>
+									github:
+								</i>
+								<span>
+									<a href="https://github.com/thomasdavis">Github Profile</a>
+								</span>
+							</div>
+						<div class="contact-info">
+							<i>
+								Website
+							</i>
+							<span>
+								<a href="https://lordajax.com">https://lordajax.com</a>
+							</span>
+						</div>
+					</div>
+						<div class="middle">
+							<div class="contact-info">
+								<i>
+									Position: 
+								</i>
+								<span>
+									Web Developer
+								</span>
+							</div>
+						</div>
 				</div>
 				<div class="summary">
 					<p>I&#x27;m a full stack web developer who can build apps from the ground up. I&#x27;ve worked mostly at startups so I am used to wearing many hats. I am a very product focused developer who prioritizes user feedback first and foremost. I&#x27;m generally very flexible when investigating new roles. My publications and volunteer sections are bullshit for the purpose of showing the this theme. </p>
 				</div>
-				<h3>Location</h3>
-				<section id="location">
-					<div class="city">
-						<strong>City</strong>
+			</section>
+		<section id="education">
+			<h3 class="title-section">Education</h3>
+		  <div class="divider"></div>
+			<div class="item">
+				<div class="flex-between">
+					<div class="title">
+						Software Engineering (incomplete)
+					</div>
+					<div class="institution">
+						The University of Queensland
+					</div>
+				</div>
+				<div class="flex-between">
+					<i class="studyType">
+						Bachelors
+					</i>
+					<div>
+						<span class="startDate">
+							2008-02-12
+						</span>
+						-
+						<span class="endDate">
+							2009-12-12
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="flex-between">
+					<div class="title">
+						Computer Science
+					</div>
+					<div class="institution">
+						University of Technology
+					</div>
+				</div>
+				<div class="flex-between">
+					<i class="studyType">
+						Bachelor
+					</i>
+					<div>
+						<span class="startDate">
+							2010-09-01
+						</span>
+						-
+						<span class="endDate">
+							2014-06-30
+						</span>
+					</div>
+				</div>
+					<ul class="courses">
+						<li>CS101 - Introduction to Computer Science</li>
+						<li>CS201 - Data Structures and Algorithms</li>
+						<li>CS301 - Operating Systems</li>
+					</ul>
+			</div>
+		</section>
+		<section id="work">
+			<h3 class="title-section">Experience</h3>
+			<div class="divider"></div>
+			<div class="item">
+				<div class="flex-between">
+					<div class="title">
+						Misc Companies
+					</div>
+					<div>
+						<span class="startDate"> 2020-05-05 </span> 
+						-
+						<span class="endDate"> </span>
+					</div>
+				</div>
+				<div class="flex-between">
+					<i>
+						Product Engineer
+					</i>
+					<div class="location">
 						Melbourne
 					</div>
-					<div class="countryCode">
-						<strong>Country code</strong>
-						AU
-					</div>
-				</section>
-				<h3>Profiles</h3>
-				<section id="profiles">
-					<div class="item">
-						<strong class="network">
-							twitter
-						</strong>
-						<div class="username">
-							ajaxdavis
-						</div>
-						<div class="url">
-							<a href="https://twitter.com/ajaxdavis">Link</a>
-						</div>
-					</div>
-					<div class="item">
-						<strong class="network">
-							github
-						</strong>
-						<div class="username">
-							thomasdavis
-						</div>
-						<div class="url">
-							<a href="https://github.com/thomasdavis">Link</a>
-						</div>
-					</div>
-				</section>
-			</section>
-		<section id="work">
-			<h2>Work</h2>
-			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2020-05-05
-					</span>
-					<span class="endDate">
-						- Present
-					</span>
-				</div>
-				<div class="position">
-					Product Engineer
-				</div>
-				<div class="website">
-					<a href="https://lordajax.com/">https://lordajax.com/</a>
-				</div>
-				<div class="summary">
-					<p>Over the past several years, I&#x27;ve worked at various roles and companies. Mostly early stage startups, doing full stack product development. </p>
 				</div>
 				<ul class="highlights">
 					<li>React / Next</li>
@@ -154,22 +307,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2020-05-05
-					</span>
-					<span class="endDate">
-						- 2021-05-05
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Tokenized
+					</div>
+					<div>
+						<span class="startDate"> 2020-05-05 </span> 
+						-
+						<span class="endDate"> 2021-05-05</span>
+					</div>
 				</div>
-				<div class="position">
-					Senior Javascript Developer
-				</div>
-				<div class="website">
-					<a href="https://tokenized.com/">https://tokenized.com/</a>
-				</div>
-				<div class="summary">
-					<p>Tokenized is a Bitcoin wallet for issuing, managing and trading digital tokens. I built out the front end which was packaged as an electron app. It was a difficult frontend to build because we store the users keys locally and used them to sign transactions and contracts.</p>
+				<div class="flex-between">
+					<i>
+						Senior Javascript Developer
+					</i>
+					<div class="location">
+						Melbourne
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>React</li>
@@ -179,22 +333,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2018-03-01
-					</span>
-					<span class="endDate">
-						- 2020-01-01
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Blockbid
+					</div>
+					<div>
+						<span class="startDate"> 2018-03-01 </span> 
+						-
+						<span class="endDate"> 2020-01-01</span>
+					</div>
 				</div>
-				<div class="position">
-					Senior Javascript Developer
-				</div>
-				<div class="website">
-					<a href="https://platform.blockbid.io">https://platform.blockbid.io</a>
-				</div>
-				<div class="summary">
-					<p>Blockbid is an Australian crypto currency exchange. I started off on the frontend but eventually became lead tech and worked on every moving piece of the exchange. I really enjoyed working with liquidity providers and connecting their platforms to help us achieve liquid markets.</p>
+				<div class="flex-between">
+					<i>
+						Senior Javascript Developer
+					</i>
+					<div class="location">
+						Melbourne
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>React, Apollo, Styled Components</li>
@@ -205,22 +360,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2016-01-01
-					</span>
-					<span class="endDate">
-						- 2018-01-01
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Listium
+					</div>
+					<div>
+						<span class="startDate"> 2016-01-01 </span> 
+						-
+						<span class="endDate"> 2018-01-01</span>
+					</div>
 				</div>
-				<div class="position">
-					Developer
-				</div>
-				<div class="website">
-					<a href="https://listium.com">https://listium.com</a>
-				</div>
-				<div class="summary">
-					<p>Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)</p>
+				<div class="flex-between">
+					<i>
+						Developer
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>Worked with Postgres, Redis and Dynamodb for storage.</li>
@@ -230,22 +386,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2014-04-01
-					</span>
-					<span class="endDate">
-						- 2016-01-01
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Electronic Frontier Foundation
+					</div>
+					<div>
+						<span class="startDate"> 2014-04-01 </span> 
+						-
+						<span class="endDate"> 2016-01-01</span>
+					</div>
 				</div>
-				<div class="position">
-					Developer
-				</div>
-				<div class="website">
-					<a href="http://www.eff.org">http://www.eff.org</a>
-				</div>
-				<div class="summary">
-					<p>Hired to take EFF&#x27;s campaigning to the next level by building an action centre in Ruby on Rails. The action centre is built around some large open source tools that lower the barrier to entry when contacting congress.</p>
+				<div class="flex-between">
+					<i>
+						Developer
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>Developed new tools for contacting congress</li>
@@ -254,22 +411,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2013-03-08
-					</span>
-					<span class="endDate">
-						- 2015-01-09
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Earbits
+					</div>
+					<div>
+						<span class="startDate"> 2013-03-08 </span> 
+						-
+						<span class="endDate"> 2015-01-09</span>
+					</div>
 				</div>
-				<div class="position">
-					CTO
-				</div>
-				<div class="website">
-					<a href="http://www.earbits.com">http://www.earbits.com</a>
-				</div>
-				<div class="summary">
-					<p>Started off as a front end developer but took on the role of CTO in early 2013. The application frontend is built with Javascript and organized as a single page application that talks to a collection of Rails web servers which are connected to MongoDB.</p>
+				<div class="flex-between">
+					<i>
+						CTO
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>Managed a small team of developers and designers</li>
@@ -278,22 +436,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2014-04-01
-					</span>
-					<span class="endDate">
-						- Present
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						JSON Resume
+					</div>
+					<div>
+						<span class="startDate"> 2014-04-01 </span> 
+						-
+						<span class="endDate"> </span>
+					</div>
 				</div>
-				<div class="position">
-					Founder
-				</div>
-				<div class="website">
-					<a href="http://jsonresume.org">http://jsonresume.org</a>
-				</div>
-				<div class="summary">
-					<p>JSON Resume is a community driven open source initiative to create a JSON based standard for resumes. There is no reason why there can&#x27;t be a common standard for writing a resume that can be extended with an ecosystem of open source tools.</p>
+				<div class="flex-between">
+					<i>
+						Founder
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>This resume is built with JSON Resume</li>
@@ -303,22 +462,23 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2013-06-01
-					</span>
-					<span class="endDate">
-						- 2016-01-01
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Taskforce.is
+					</div>
+					<div>
+						<span class="startDate"> 2013-06-01 </span> 
+						-
+						<span class="endDate"> 2016-01-01</span>
+					</div>
 				</div>
-				<div class="position">
-					Developer
-				</div>
-				<div class="website">
-					<a href="http://www.taskforce.is">http://www.taskforce.is</a>
-				</div>
-				<div class="summary">
-					<p>Worked on many politically charged campaigns against mass surveillance. Not only technically challenging work but also a lot of networking and getting my hands dirty with politics.    Our biggest project was &quot;TheDayWeFightBack&quot;..</p>
+				<div class="flex-between">
+					<i>
+						Developer
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>Generated  37,000,000 banner views</li>
@@ -328,44 +488,46 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2013-01-01
-					</span>
-					<span class="endDate">
-						- Present
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Drone Hire
+					</div>
+					<div>
+						<span class="startDate"> 2013-01-01 </span> 
+						-
+						<span class="endDate"> </span>
+					</div>
 				</div>
-				<div class="position">
-					Co-Founder
-				</div>
-				<div class="website">
-					<a href="http://www.dronehire.org">http://www.dronehire.org</a>
-				</div>
-				<div class="summary">
-					<p>An international directory of civilian drone / UAV operators for hire. Services include aerial photography, aerial video, mapping, surveying, precision agriculture, real estate photography, remote inspections and infrared imaging. Our plan is to be the place to go when looking for UAV/Drone services. The website is built in Backbone.js and API is built with Node.js and Postgres. </p>
+				<div class="flex-between">
+					<i>
+						Co-Founder
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>The site and blog combined have managed to receive over 200,000 visitors in 2014.</li>
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2011-01-01
-					</span>
-					<span class="endDate">
-						- 2014-01-01
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						BackboneTutorials.com
+					</div>
+					<div>
+						<span class="startDate"> 2011-01-01 </span> 
+						-
+						<span class="endDate"> 2014-01-01</span>
+					</div>
 				</div>
-				<div class="position">
-					Founder
-				</div>
-				<div class="website">
-					<a href="http://backbonetutorials.com">http://backbonetutorials.com</a>
-				</div>
-				<div class="summary">
-					<p>I write tutorials and blog post regarding the popular Javascript framework Backbone.js. The tutorials cover a range of topics regarding front end development aimed at beginners, experts and anyone in between.</p>
+				<div class="flex-between">
+					<i>
+						Founder
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 				<ul class="highlights">
 					<li>Over two million unique visitors a year</li>
@@ -374,263 +536,95 @@ blockquote {
 				</ul>
 			</div>
 			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2011-01-01
-					</span>
-					<span class="endDate">
-						- 2012-06-01
-					</span>
+				<div class="flex-between">
+					<div class="title">
+						Ephox
+					</div>
+					<div>
+						<span class="startDate"> 2011-01-01 </span> 
+						-
+						<span class="endDate"> 2012-06-01</span>
+					</div>
 				</div>
-				<div class="position">
-					Front-end Developer
-				</div>
-				<div class="website">
-					<a href="http://ephox.com">http://ephox.com</a>
-				</div>
-				<div class="summary">
-					<p>Ephox is a worldwide company who is heavily involved with the development of TinyMce and enterprise editors. My primary role included building front-end widgets and applications. Worked on a major product using Backbone.js as a base. Heavily involved in UI/UX design and wire-framing. Also spend a lot of time designing API specifications and documentation.</p>
-				</div>
-			</div>
-		</section>
-		<section id="volunteer">
-			<h2>Volunteer</h2>
-			<div class="item">
-				<h3 class="company">
-					Open Source Project
-				</h3>
-				<div class="date">
-					<span class="startDate">
-						2016-01-01
-					</span>
-					<span class="endDate">
-						- Present
-					</span>
-				</div>
-				<div class="position">
-					Contributor
-				</div>
-				<div class="summary">
-					<p>Contributing to open source projects to improve software quality.</p>
-				</div>
-				<ul class="highlights">
-					<li>Fixed critical bugs and added new features.</li>
-					<li>Mentored new contributors.</li>
-				</ul>
-			</div>
-		</section>
-		<section id="education">
-			<h2>Education</h2>
-			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2008-02-12
-					</span>
-					<span class="endDate">
-						- 2009-12-12
-					</span>
-				</div>
-				<div class="institution">
-					The University of Queensland
-				</div>
-				<div class="area">
-					Software Engineering (incomplete)
-				</div>
-				<div class="studyType">
-					Bachelors
-				</div>
-			</div>
-			<div class="item">
-				<div class="date">
-					<span class="startDate">
-						2010-09-01
-					</span>
-					<span class="endDate">
-						- 2014-06-30
-					</span>
-				</div>
-				<div class="institution">
-					University of Technology
-				</div>
-				<div class="area">
-					Computer Science
-				</div>
-				<div class="studyType">
-					Bachelor
-				</div>
-				<ul class="courses">
-					<li>CS101 - Introduction to Computer Science</li>
-					<li>CS201 - Data Structures and Algorithms</li>
-					<li>CS301 - Operating Systems</li>
-				</ul>
-			</div>
-		</section>
-		<section id="awards">
-			<h2>Awards</h2>
-			<div class="item">
-				<div class="title">
-					Defender of the Internet
-				</div>
-				<div class="date">
-					2014-10-02
-				</div>
-				<div class="awarder">
-					Fight For The Future
-				</div>
-				<div class="summary">
-					<p>For my work against mass surveillance and building out civic tools for digital democracy.</p>
-				</div>
-			</div>
-		</section>
-		<section id="publications">
-			<h2>Publications</h2>
-			<div class="item">
-				<div class="name">
-					Advanced JavaScript Techniques
-				</div>
-				<div class="publisher">
-					Tech Books Publishing
-				</div>
-				<div class="releaseDate">
-					2019-08-01
-				</div>
-				<div class="summary">
-					<p>A comprehensive guide to modern JavaScript development.</p>
+				<div class="flex-between">
+					<i>
+						Front-end Developer
+					</i>
+					<div class="location">
+						
+					</div>
 				</div>
 			</div>
 		</section>
 		<section id="skills">
-			<h2>Skills</h2>
+			<h3 class="title-section">Skills</h3>
+			<div class="divider mb"></div>
+				<div class="flex-between skill-item">
+					<div class="title skill-title">
+						Frontend
+					</div>
+					<div>
+						HTML / JSX, SCSS / CSS / BEM / Styled Components, Javascript / Typescript, React / Next, Redux / Apollo
+					</div>
+				</div>
+				<div class="flex-between skill-item">
+					<div class="title skill-title">
+						Backend
+					</div>
+					<div>
+						Node, Ruby, Python, Postgres, Redis, Serverless
+					</div>
+				</div>
+				<div class="flex-between skill-item">
+					<div class="title skill-title">
+						Devops
+					</div>
+					<div>
+						AWS, G Cloud, Heroku, Caching
+					</div>
+				</div>
+			<div class="mb"></div>
+		</section>
+		<section id="awards">
+			<h3 class="title-section">Honors & Awards</h3>
+			<div class="divider"></div>
+				<div class="item">
+					<div class="flex-between">
+						<div class="title">
+							Defender of the Internet
+						</div>
+						<div class="date">
+							2014-10-02
+						</div>
+					</div>
+					<i class="awarder">
+						Fight For The Future
+					</i>
+					<div class="summary">
+						For my work against mass surveillance and building out civic tools for digital democracy.
+					</div>
+				</div>
+		</section>
+		<section id="publications">
+			<h3 class="title-section">Publications</h3>
+			<div class="divider"></div>
 			<div class="item">
-				<div class="name">
-					Frontend
+				<div class="flex-between">
+					<div class="title">
+						Advanced JavaScript Techniques
+					</div>
+					<div class="date">
+						2019-08-01
+					</div>
 				</div>
-				<div class="level">
-					<em>Senior</em>
+				<div>
+					Tech Books Publishing
 				</div>
-				<ul class="keywords">
-					<li>HTML / JSX</li>
-					<li>SCSS / CSS / BEM / Styled Components</li>
-					<li>Javascript / Typescript</li>
-					<li>React / Next</li>
-					<li>Redux / Apollo</li>
-				</ul>
-			</div>
-			<div class="item">
-				<div class="name">
-					Backend
-				</div>
-				<div class="level">
-					<em>Senior</em>
-				</div>
-				<ul class="keywords">
-					<li>Node</li>
-					<li>Ruby</li>
-					<li>Python</li>
-					<li>Postgres</li>
-					<li>Redis</li>
-					<li>Serverless</li>
-				</ul>
-			</div>
-			<div class="item">
-				<div class="name">
-					Devops
-				</div>
-				<div class="level">
-					<em>Senior</em>
-				</div>
-				<ul class="keywords">
-					<li>AWS</li>
-					<li>G Cloud</li>
-					<li>Heroku</li>
-					<li>Caching</li>
-				</ul>
+					<div class="italic">
+						A comprehensive guide to modern JavaScript development.
+					</div>
 			</div>
 		</section>
-		<section id="languages">
-			<h2>Languages</h2>
-			<div class="item">
-				<div class="language">
-					English
-				</div>
-				<div class="fluency">
-					<em>Native speaker</em>
-				</div>
-			</div>
-		</section>
-		<section id="interests">
-			<h2>Interests</h2>
-			<div class="item">
-				<div class="name">
-					Gardening
-				</div>
-				<ul class="keywords">
-					<li>Lazy Gardening</li>
-				</ul>
-			</div>
-			<div class="item">
-				<div class="name">
-					Music
-				</div>
-				<ul class="keywords">
-					<li>Guitar</li>
-					<li>Singing</li>
-					<li>Dancing</li>
-				</ul>
-			</div>
-			<div class="item">
-				<div class="name">
-					Books
-				</div>
-				<ul class="keywords">
-					<li>Reading</li>
-					<li>Writing</li>
-					<li>History</li>
-				</ul>
-			</div>
-			<div class="item">
-				<div class="name">
-					Open Source
-				</div>
-				<ul class="keywords">
-					<li>All of it</li>
-				</ul>
-			</div>
-		</section>
-		<section id="references">
-			<h2>References</h2>
-			<div class="item">
-				<blockquote class="reference">
-					Thomas was hired as a lead developer and, upon the leaving of our co-founder took over as CTO of Earbits. Thomas is, hands down, one of those A Players you hear of companies dying to hire. He is incredibly smart, not just at code but about everything from classical music to Chinese language and culture. Thomas is great to work with and, as a well established contributor to open source projects and several successful ventures, commands the respect of engineers at all levels. I would suggest doing anything you can to have him on your team.
-				</blockquote>
-				<div class="name">
-					— Joey Flores, Co-founder and CEO of Earbits, Inc.
-				</div>
-			</div>
-			<div class="item">
-				<blockquote class="reference">
-					I&#x27;ve had the great pleasure of working with Thomas for the past three years at Earbits, and on a few side projects. Two years ago our CTO left on a moment&#x27;s notice, Thomas saved our company by quickly stepping up to fill this role. He has been with our company through thick and thin and made serious personal sacrifices in order to help the company during tough times. He is a phenomenal hacker and a true team player. Highly recommended!
-				</blockquote>
-				<div class="name">
-					— Yotam Rosenbaum, SVP of Operations, Earbits, Inc.
-				</div>
-			</div>
-			<div class="item">
-				<blockquote class="reference">
-					Thomas is an extremely talented engineer with a very broad range of skills and experience. From being a thought leader in the front-end community via backbonetutorials.com and cdnjs.com, to designing and implementing the API for cdnjs.com, working with Thomas has been fantastic learning experience. Thomas is truly a full stack develop, and his work output is incredible. If there is any opportunity to work with Thomas, I take it. He is the definition of an A player.
-				</blockquote>
-				<div class="name">
-					— Ryan Kirkman, Senior Software Engineer at Nerdwallet
-				</div>
-			</div>
-			<div class="item">
-				<blockquote class="reference">
-					On Thomas Davis... Hire this guy. Do not be fooled. Incredibly capable and fast. Plays well with others. Unbelievable at front-end work end programming but that is just the start. Visionary. Hire him before I do.
-				</blockquote>
-				<div class="name">
-					— Greg Davis
-				</div>
-			</div>
-		</section>
+	</div>
 	</body>
 </html>
