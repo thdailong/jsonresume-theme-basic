@@ -1,7 +1,7 @@
 {
-  "name": "jsonresume-theme-boilerplate",
+  "name": "jsonresume-theme-basic",
   "version": "0.1.2",
-  "description": "Boilerplate theme for JSON Resume",
+  "description": "Basic theme for JSON Resume",
   "author": "Mattias Erming",
   "repository": {
     "type": "git",
